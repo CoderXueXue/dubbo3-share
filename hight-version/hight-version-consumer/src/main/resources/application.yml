@@ -1,0 +1,18 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: high_version_consumer
+  profiles:
+    group:
+      "dev": "common,common-dev"
+      "prod": "common,common-prod"
+
+dubbo:
+  scan:
+    base-packages: org.example.dubbo
+  protocol:
+    name: dubbo
+    port: 20882
+
+

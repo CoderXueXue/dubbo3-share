@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: low_version_provider
+  profiles:
+    group:
+      "dev": "common,common-dev"
+      "prod": "common,common-prod"
+
+dubbo:
+  scan:
+    base-packages: org.example.dubbo
+  protocol:
+    name: dubbo
+    port: 20882
+

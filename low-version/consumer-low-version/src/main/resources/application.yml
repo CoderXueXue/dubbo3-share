@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: low_version_consumer
+  profiles:
+    group:
+      "dev": "common,common-dev"
+      "prod": "common,common-prod"
+
+dubbo:
+  scan:
+    base-packages: org.example.dubbo
+

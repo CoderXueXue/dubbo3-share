@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<!--    <parent>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
+<!--        <version>2.7.8</version>-->
+<!--    </parent>-->
+
+    <parent>
+        <artifactId>qufaya-parent</artifactId>
+        <groupId>com.qufaya</groupId>
+        <version>1.0-springboot2.7-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.example</groupId>
+    <artifactId>dubbo3-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>api</module>
+        <module>low-version</module>
+        <module>hight-version</module>
+    </modules>
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <profiles>
+        <!-- 本地环境 -->
+        <profile>
+            <id>dev</id>
+            <properties>
+                <profileActive>dev</profileActive>
+            </properties>
+            <!-- 设置默认配置为本地环境 -->
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <!-- 测试环境 -->
+        <profile>
+            <id>test</id>
+            <properties>
+                <profileActive>test</profileActive>
+            </properties>
+        </profile>
+        <!-- 正式环境 -->
+        <profile>
+            <id>pro</id>
+            <properties>
+                <profileActive>pro</profileActive>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
