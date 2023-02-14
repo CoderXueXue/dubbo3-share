@@ -20,7 +20,7 @@ HELM_CHART='xixitime/java-app'
 HELM_RELEASE_NAME=${IMAGE_NAME}"-"${PROFILE}
 HELM_NS=${PROFILE}
 
-VALUES_FILE="values-${PROFILE}.yaml"
+#VALUES_FILE="values-${PROFILE}.yaml"
 
 WORKDIR=`pwd`
 
@@ -33,7 +33,7 @@ echo "docker_registry = ${DOCKER_REGISTRY}"
 echo "helm_chart = ${HELM_CHART}"
 echo "helm_release_name = ${HELM_RELEASE_NAME}"
 echo "helm_namespace = ${PROFILE}"
-echo "values_file = ${VALUES_FILE}"
+#echo "values_file = ${VALUES_FILE}"
 
 # 检查文件是否齐全
 if [ ! -f "Dockerfile" ]; then
@@ -41,10 +41,10 @@ if [ ! -f "Dockerfile" ]; then
     exit 1
 fi
 
-if [ ! -f ${VALUES_FILE} ]; then
-    echo "error: ${VALUES_FILE} not found" >&2
-    exit 1
-fi
+#if [ ! -f ${VALUES_FILE} ]; then
+#    echo "error: ${VALUES_FILE} not found" >&2
+#    exit 1
+#fi
 
 export LANG=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8

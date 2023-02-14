@@ -2,7 +2,7 @@ server:
   port: 8081
 spring:
   application:
-    name: low_version_consumer
+    name: demo_consumer
   profiles:
     group:
       "dev": "common,common-dev"

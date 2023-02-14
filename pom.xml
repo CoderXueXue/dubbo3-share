@@ -23,9 +23,9 @@
         <module>api</module>
         <module>low-version</module>
         <module>hight-version</module>
+        <module>transition-version</module>
     </modules>
     <modelVersion>4.0.0</modelVersion>
-
 
     <profiles>
         <!-- 本地环境 -->
