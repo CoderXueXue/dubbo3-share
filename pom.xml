@@ -24,6 +24,7 @@
         <module>low-version</module>
         <module>hight-version</module>
         <module>transition-version</module>
+        <module>low-version-api</module>
     </modules>
     <modelVersion>4.0.0</modelVersion>
 

@@ -48,10 +48,17 @@ framework:
 dubbo:
   application:
     logger: log4j2
-  protocol:
-    name: dubbo
-    port: -1
+  protocols:
+    tri: # 三方协议
+      name: tri
+      port: 1223
+#    dubbo: # dubbo协议
+#      name: dubbo
+#      port: -1
   config-center:
     address: zookeeper://zookeeper-dev.dev.svc.cluster.local:2181
   registry:
     address: zookeeper://zookeeper-dev.dev.svc.cluster.local:2181
+  consumer:
+    application:
+      qosPort: 2223

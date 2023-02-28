@@ -3,13 +3,9 @@ spring:
     name: demo_provider
   profiles:
     group:
-      "dev": "common,common-dev"
-      "prod": "common,common-prod"
+      "dev2": "common-dev2"
+      "dev1": "common-dev1"
 
 dubbo:
   scan:
     base-packages: org.example.dubbo
-  protocol:
-    name: dubbo
-    port: 20882
-

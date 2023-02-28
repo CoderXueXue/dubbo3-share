@@ -55,9 +55,9 @@ dubbo:
     tri: # 三方协议
       name: tri
       port: 8001
-    dubbo: # dubbo协议
-      name: dubbo
-      port: 8000
+#    dubbo: # dubbo协议
+#      name: dubbo
+#      port: 8000
   config-center:
     address: zookeeper://zookeeper-dev.dev.svc.cluster.local:2181
   registry:

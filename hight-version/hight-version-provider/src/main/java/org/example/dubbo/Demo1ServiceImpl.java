@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
  * @author huchai
  * @date 2023/2/12
  */
-//@Service
 @DubboService
 @Component
 public class Demo1ServiceImpl implements Demo1Service {
